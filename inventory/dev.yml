@@ -1,0 +1,13 @@
+[nfs-rhel]
+192.168.100.10 ansible_ssh_user='ubuntu'
+
+[webservers-rhel]
+192.168.100.11 ansible_ssh_user='ubuntu'
+192.168.100.9 ansible_ssh_user='ubuntu'
+
+[db-ubuntu]
+192.168.100.12 ansible_ssh_user='ubuntu' 
+
+[lb-ubuntu]
+192.168.100.13 ansible_ssh_user='ubuntu'
+192.168.100.15 ansible_ssh_user='ubuntu'
