@@ -1,6 +1,6 @@
 ---
 - name: update web, nfs and db servers
-  hosts: webservers-rhel, nfs-rhel
+  hosts: webservers_rhel, nfs_rhel
   remote_user: ubuntu
   become: yes
   become_user: root
@@ -11,7 +11,7 @@
         state: latest
 
 - name: update LB server and DB serverss
-  hosts: lb-ubuntu, db-ubuntu
+  hosts: lb_ubuntu, db_ubuntu
   remote_user: ubuntu
   become: yes
   become_user: root

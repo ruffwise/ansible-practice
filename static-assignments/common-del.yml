@@ -1,0 +1,25 @@
+---
+- name: update web and nfs
+  hosts: webservers_rhel, nfs_rhel
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: delete wireshark
+    yum:
+      name: wireshark
+      state: removed
+
+- name: update LB and DB server
+  hosts: lb_ubuntu, db_ubuntu
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: delete wireshark
+    apt:
+      name: wireshark-qt
+      state: absent
+      autoremove: yes
+      purge: yes
+      autoclean: yes
